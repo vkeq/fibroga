@@ -85,3 +85,13 @@ a:hover {
 .volume-controls a:hover {
     text-decoration: underline;
 }
+
+.content {
+    max-height: 400px; /* Altezza massima per contenere 14 tracce */
+    overflow-y: auto;  /* Abilita lo scorrimento verticale */
+    scrollbar-width: none; /* Nasconde la scrollbar su Firefox */
+}
+
+.content::-webkit-scrollbar {
+    display: none; /* Nasconde la scrollbar su Chrome, Safari e Edge */
+}
