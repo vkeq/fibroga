@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Album</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">The Album</div>
+
+        <!-- Descrizione dell'album -->
+        <div class="album-description">
+            <p>	I Basley Click sono un gruppo rap italiano nato nei primi anni 2000 e composto da Fritz Da Cat, Fede dei Lyricalz e Fabri Fibra degli Uomini di Mare. Nel 2001 hanno pubblicato "The Album", lasciando un segno nella scena hip hop italiana.</p>
+        </div>
+        
+        <div class="content">
+            <div class="folder"><a href="#" onclick="playSong('songs/album1/Non Capisco - Feat. Al Castellana.mp3')">Non Capisco - Feat. Al Castellana</a></div>
+            <div class="folder"><a href="#" onclick="playSong('songs/album1/Dico A Voi - Feat. Nesli.mp3')">Dico A Voi - Feat. Nesli</a></div>
+            <div class="folder"><a href="#" onclick="playSong('songs/album1/Marziane Arti Marziali - Feat. Seka Sek L300.mp3')">Marziane Arti Marziali - Feat. Seka Sek L300</a></div>
+            <div class="folder"><a href="#" onclick="playSong('songs/album1/Tanto Vale Dirselo.mp3')">Tanto Vale Dirselo</a></div>
+            <div class="folder"><a href="#" onclick="playSong('songs/album1/SEI IL NOSTRO IDOLO.mp3')">SEI IL NOSTRO IDOLO</a></div>
+            <div class="folder"><a href="#" onclick="playSong('songs/album1/Per Quel Giorno.mp3')">Per Quel Giorno</a></div>
+            <div class="folder"><a href="#" onclick="playSong('songs/album1/Sei Cavaliere - Feat Turi.mp3')">Sei Cavaliere - Feat Turi</a></div>
+            <div class="folder"><a href="#" onclick="playSong('songs/album1/Come Viene.mp3')">Come Viene</a></div>
+            <div class="folder"><a href="#" onclick="playSong('songs/album1/Che andamento assicuro - Feat Turi.mp3')">Che andamento assicuro - Feat Turi</a></div>
+            <div class="folder"><a href="#" onclick="playSong('songs/album1/E dire che tu - Feat. Rachel Anne.mp3')">E dire che tu - Feat. Rachel Anne</a></div>
+            <div class="folder"><a href="#" onclick="playSong('songs/album1/Meglio così .mp3')">Meglio così</a></div>
+
+            <!-- Didascalia dell'album -->
+            <div class="album-caption">
+                <p>Questo album include una selezione di tracce rilassanti ed evocative, perfette per momenti di riflessione e relax. Ogni canzone porta con sé un’atmosfera unica e profonda.</p>
+            </div>
+        </div>
+
+        <!-- Barra di avanzamento -->
+        <div class="progress">
+            <span>Progress: [</span><span id="seekbar">|</span><span>]</span>
+        </div>
+
+        <div class="navigation">
+            <span><a href="index.html">[Indietro]</a></span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

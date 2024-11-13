@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibroga by @sono.long</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar"> Fibroga by @sono.long</div>
+        
+        <div class="content">
+            <div class="folder" onclick="openPlaylist()">[Playlists]</div>
+        </div>
+        
+        <div class="player">
+            <span>Barra : [</span>
+            <span id="seekbar">|</span>
+            <span>] <a href="#" onclick="playPause()">Play</a></span>
+        </div>
+
+        <!-- Pulsanti di navigazione in basso a destra -->
+        <div class="navigation">
+            <div class="volume-controls">
+                <span>Volume: </span>
+                <a href="#" onclick="decreaseVolume()">[-]</a>
+                <a href="#" onclick="increaseVolume()">[+]</a>
+            </div>
+            <span id="backButton" onclick="goBack()" style="display: none;">[Back]</span>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

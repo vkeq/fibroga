@@ -1,0 +1,87 @@
+/* Base Styles */
+body {
+    background-color: white;
+    color: black;
+    font-family: monospace;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Window Container */
+.window {
+    text-align: left;
+    font-size: 16px;
+    position: relative;
+    min-height: 80vh;
+    padding: 10px;
+}
+
+/* Title Style */
+.title-bar {
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+/* Folder Style */
+.folder {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.folder:hover {
+    color: grey;
+    text-decoration: underline;
+}
+
+/* Player Control Styles */
+.player {
+    margin-top: 20px;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation and Back Button */
+.navigation {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#backButton {
+    color: blue;
+    cursor: pointer;
+}
+
+#backButton:hover {
+    text-decoration: underline;
+}
+
+/* Volume Controls */
+.volume-controls {
+    font-size: 14px;
+}
+
+/* Retro Link Styles for Navigation and Volume Controls */
+.navigation a,
+.volume-controls a {
+    color: blue;
+    text-decoration: none;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.navigation a:hover,
+.volume-controls a:hover {
+    text-decoration: underline;
+}
