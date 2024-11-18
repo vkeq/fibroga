@@ -1,11 +1,11 @@
 /* Stile generale retro-minimal */
 body {
-    font-family: 'Courier New', Courier, monospace; /* Font monospaziato */
-    background-color: black; /* Sfondo nero */
-    color: white; /* Testo bianco */
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(0, 0, 0);
+    color: white;
     margin: 0;
     padding: 0;
-    line-height: 1.8; /* Linee distanziate */
+    line-height: 1.8;
 }
 
 header {
@@ -35,23 +35,23 @@ h2 {
     margin: 20px 0;
 }
 
-.article {
-    border: 1px solid white;
-    padding: 15px;
-    margin-bottom: 20px;
-}
-
-.tracklist {
-    margin-top: 10px;
-    padding-left: 20px;
-    list-style-type: disc;
-}
-
 footer {
     text-align: center;
     padding: 10px 0;
     border-top: 1px solid white;
     margin-top: 20px;
+}
+
+/* Navigazione */
+nav ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
 }
 
 a {
@@ -63,13 +63,53 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Barra di navigazione responsiva */
 nav ul {
-    padding: 0;
-    list-style: none;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-nav ul li {
-    display: inline-block;
-    margin: 0 10px;
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px; /* Adjust text size for better readability */
+    }
+    header {
+        padding: 10px 0;
+    }
+    nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    main {
+        padding: 10px;
+        max-width: 100%; /* Utilize full width of small screens */
+    }
+    footer {
+        font-size: 12px; /* Reduce footer text size */
+        padding: 5px 0;
+    }
+    h1, h2 {
+        font-size: 1.2rem; /* Scale down headings */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    nav ul {
+        display: none; /* Hide navigation for very small screens */
+    }
+    nav ul.responsive {
+        display: flex; /* Display menu when toggled */
+        flex-direction: column;
+    }
+    .menu-icon {
+        display: block; /* Show menu icon for toggle */
+        cursor: pointer;
+        text-align: center;
+        background: #333;
+        color: white;
+        padding: 10px;
+    }
 }
