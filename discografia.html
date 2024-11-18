@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Discografia - Fabri Fibra</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Stile generale */
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            text-transform: uppercase;
+            border-bottom: 1px solid white;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .album {
+            margin-bottom: 20px;
+            border: 1px solid white;
+            padding: 10px;
+        }
+
+        .album h2 {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #111;
+            color: white;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .album h2::before {
+            content: '📁';
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .album h2.open::before {
+            content: '📂';
+        }
+
+        .tracklist {
+            display: none; /* Nasconde la tracklist di default */
+            padding-left: 20px;
+            margin-top: 10px;
+            list-style-type: disc;
+        }
+
+        .tracklist li {
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            border-top: 1px solid white;
+        }
+    </style>
+    <script>
+        // Aggiunge l'espansione e il collasso delle tracklist
+        function toggleTracklist(event) {
+            const tracklist = event.target.nextElementSibling;
+            if (tracklist.style.display === "none" || !tracklist.style.display) {
+                tracklist.style.display = "block";
+                event.target.classList.add("open");
+            } else {
+                tracklist.style.display = "none";
+                event.target.classList.remove("open");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Discografia di Fabri Fibra</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="biografia.html">Biografia</a></li>
+                <li><a href="collaborazioni.html">Collaborazioni</a></li>
+                <li><a href="gruppi.html">Gruppi Musicali</a></li>
+                <li><a href="evoluzione.html">Evoluzione Musicale</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p>Qui troverai solo gli album che sono usciti ufficialmente sul sito ufficiale fabrifibra.it e su tutte le piattaforme digitale, visita old.fibroga.com per ascoltare tutte le canzoni mai rilasciate ufficialemente.</p>
+        <a href="https://old.fibroga.com/">old.fibroga.com</a>
+        <div class="album">
+            <h2 onclick="toggleTracklist(event)">Turbe giovanili (2002)</h2>
+            <ul class="tracklist">
+                <li>Scattano le indagini</li>
+                <li>Luna piena</li>
+                <li>Dalla a alla zeta</li>
+                <li>Dove fuggi</li>
+                <li>Di fretta</li>
+                <li>Fuori norma</li>
+                <li>Ci penso dopo</li>
+                <li>Mi stai sul cazzo</li>
+                <li>Per averti qui</li>
+                <li>Come te</li>
+                <li>Chi c'è</li>
+                <li>Se non dai il meglio (Non io)</li>
+                <li>In quanti?</li>
+                <li>Nuovi stili d'insonnia</li>
+                <li>Personaggi di passaggio</li>
+                <li>Di noi</li>
+                <li>Ma che persona</li>
+            </ul>
+        </div>
+
+        <div class="album">
+            <h2 onclick="toggleTracklist(event)">Mr. Simpatia (2004)</h2>
+            <ul class="tracklist">
+                <li>Verso altri lidi</li>
+                <li>Fabri Fibra</li>
+                <li>Non fare la puttana</li>
+                <li>Cazzi tuoi</li>
+                <li>Un'altra chance</li>
+                <li>Lo faccio</li>
+                <li>Non farci caso</li>
+                <li>Quello che vuoi</li>
+                <li>Venerdì</li>
+                <li>Alta velocità</li>
+                <li>Rimando</li>
+                <li>Stile</li>
+                <li>Io non tiro</li>
+                <li>Sono un uomo</li>
+                <li>Alla fine di tutto</li>
+            </ul>
+        </div>
+
+        <div class="album">
+            <h2 onclick="toggleTracklist(event)">Tradimento (2006)</h2>
+            <ul class="tracklist">
+                <li>Rap in guerra</li>
+                <li>Su le mani</li>
+                <li>Applausi per Fibra</li>
+                <li>Mal di stomaco</li>
+                <li>Ogni donna</li>
+                <li>La pula bussò</li>
+                <li>Fai come noi</li>
+                <li>Tutti in campana</li>
+                <li>Rompiti il collo</li>
+                <li>Sono un soldato</li>
+                <li>Coccole</li>
+                <li>Vaffan***o scemo (feat. Nesli)</li>
+                <li>Il triangolo sì</li>
+                <li>Tutti matti</li>
+                <li>Idee stupide (feat. Diego Mancino)</li>
+                <li>Che cazzata</li>
+                <li>Cuore di latta</li>
+            </ul>
+        </div>
+        <div class="album">
+            <h2 onclick="toggleTracklist(event)">Bugiardo (2007)</h2>
+            <ul class="tracklist">
+                <li>Bugiardo </li>
+                <li>La soluzione</li>
+                <li>Tu così bella non ce l'hai</li>
+                <li>Andiamo a Sanremo</li>
+                <li>Cento modi per morire (feat. Metal Carter)</li>
+                <li>Un'altra chance (feat. Alborosie)</li>
+                <li>In Italia (feat. Gianna Nannini)</li>
+                <li>Cattiverie </li>
+                <li>Questo è il nuovo singolo</li>
+                <li>La posta di Fibra</li>
+                <li>Le ragazze (feat. Nesli)</li>
+                <li>Non c'è tempo</li>
+                <li>Sempre io</li>
+                <li>Il più pazzo</li>
+                <li>Questa vita</li>
+                <li>Potevi essere tu</li>
+                <li>Non provo più niente</li>
+            </ul>
+        </div>
+        <div class="album">
+            <h2 onclick="toggleTracklist(event)">Chi vuole essere Fabri Fibra? (2009)</h2>
+            <ul class="tracklist">
+                <li>Chi vuole essere Fabri Fibra? (feat. Daniele Vit)  </li>
+                <li>10 euro in tasca (feat. Supa)</li>
+                <li>Speak English </li>
+                <li>Donna famosa</li>
+                <li>Via vai (feat. Dargen D'Amico) </li>
+                <li>In quel posto</li>
+                <li>Extralarge (feat. Vincenzo da Via Anfossi)</li>
+                <li>In testa (feat. Noyz Narcos) </li>
+                <li>Alla fine di tutto questo</li>
+                <li>Incomprensioni (feat. Federico Zampaglione)</li>
+            </ul>
+        </div>
+        <div class="album">
+            <h2 onclick="toggleTracklist(event)">Controcultura (2010)</h2>
+            <ul class="tracklist">
+                <li>6791 </li>
+                <li>Escort </li>
+                <li>≠ (diverso)</li>
+                <li>Double Trouble</li>
+                <li>+- (più o meno)</li>
+                <li>Spara al diavolo</li>
+                <li>Controcultura </li>
+                <li>Vip in Trip </li>
+                <li>Qualcuno normale (feat. Marracash)</li>
+                <li>Insensibile (feat. Dargen D'Amico)</li>
+                <li>Tranne te</li>
+                <li>Non potete capire</li>
+                <li>3 parole</li>
+                <li>Rivelazione</li>
+                <li>Troppo famoso (feat. Entics)</li>
+                <li>Le donne</li>
+                <li>In alto (feat. Simona Barbieri)</li>
+                <li>La fretta (feat. DJ Double S)</li>
+            </ul>
+        </div>
+        <div class="album">
+            <h2 onclick="toggleTracklist(event)">Guerra e pace (2013)</h2>
+            <ul class="tracklist">
+                <li>2031 (Intro)  </li>
+                <li>Bisogna scrivere  </li>
+                <li>Voce </li>
+                <li>Che tempi (con Al Castellana) </li>
+                <li>Pronti, partenza, via! </li>
+                <li>A me di te</li>
+                <li>Non correre </li>
+                <li>Tutto in un giorno </li>
+                <li>La solitudine dei numeri uno</li>
+                <li>Panico (con Neffa)</li>
+                <li>Frank Sinatra</li>
+                <li>Raggi laser </li>
+                <li>Nemico pubblico</li>
+                <li>Non credo ai media</li>
+                <li>Guerra e pace</li>
+                <li>Alta vendita</li>
+                <li>Centoquindici </li>
+                <li>Ring Ring </li>
+                <li>Dagli sbagli si impara (con Elisa)</li>
+            </ul>
+        </div>
+        <div class="album">
+            <h2 onclick="toggleTracklist(event)">Casus belli EP (2013)</h2>
+            <ul class="tracklist">
+                <li>Parole in fumo</li>
+                <li>Come Totti </li>
+                <li>Teoria e pratica </li>
+                <li>Nessuno lo dice </li>
+                <li>Denaro contante (Inedito)  </li>
+                <li>Il mio amico Arnold </li>
+                <li>Mani pulite </li>
+                <li>Felice per me (con Nitro)  </li>
+            </ul>
+        </div>
+        <div class="album">
+            <h2 onclick="toggleTracklist(event)">Squallor (2015)</h2>
+            <ul class="tracklist">
+                <li>Troie in Porsche</li>
+                <li>Amnesia  </li>
+                <li>Lamborghini/Rime sul beat </li>
+                <li>Rock That Shit (feat. Youssoupha) </li>
+                <li>Come Vasco  </li>
+                <li>Alieno  </li>
+                <li>E tu ci convivi (feat. Gué Pequeno) </li>
+                <li>Cosa avevi capito?  </li>
+                <li>Il rap nel mio paese </li>
+                <li>A volte (feat. Gel)  </li>
+                <li>A casa  </li>
+                <li>Pablo Escobar/Skit Squallor</li>
+                <li>Squallor  </li>
+                <li>Playboy (feat. Marracash) </li>
+                <li>E.U.R.O. (feat. Clementino) </li>
+                <li>Dexter (feat. Nitro, Salmo) </li>
+                <li>Non me ne frega un cazzo (feat. Gemitaiz, MadMan) </li>
+                <li>Sento le sirene </li>
+                <li>Dio c'è </li>
+                <li>Trainspotting</li>
+                <li>Voglio sapere </li>
+            </ul>
+        </div>
+        <div class="album">
+            <h2 onclick="toggleTracklist(event)">Fenomeno (2017)</h2>
+            <ul class="tracklist">
+                <li>Intro </li>
+                <li>Red Carpet  </li>
+                <li>Fenomeno </li>
+                <li>Skit - Il tempo vola </li>
+                <li>Money for Dope 2017       </li>
+                <li>Pamplona (feat. Thegiornalisti)  </li>
+                <li>Equilibrio </li>
+                <li>Skit - Considerazioni (feat. Roberto Saviano)   </li>
+                <li>Cronico  </li>
+                <li>Stavo pensando a te </li>
+                <li>Lascia stare  </li>
+                <li>Dipinto di blu (feat. Laïoung) </li>
+                <li>Invece no  </li>
+                <li>Ogni giorno </li>
+                <li>Le vacanze</li>
+                <li>Nessun aiuto</li>
+                <li>Ringrazio </li>
+            </ul>
+        </div>
+        <div class="album">
+            <h2 onclick="toggleTracklist(event)">Caos (2022)</h2>
+            <ul class="tracklist">
+                <li>Intro </li>
+                <li>GoodFellas (feat. Rose Villain)   </li>
+                <li>Brutto figlio di </li>
+                <li>Sulla giostra (feat. Neffa)  </li>
+                <li>Stelle (feat. Maurizio Carucci)   </li>
+                <li>Propaganda (feat. Colapesce Dimartino) </li>
+                <li>Caos (feat. Lazza & Madame)  </li>
+                <li>Pronti al peggio (feat. Ketama126) </li>
+                <li>Fumo erba  </li>
+                <li>Demo nello stereo </li>
+                <li>El diablo  </li>
+                <li>Amici o nemici   </li>
+                <li>Cocaine (feat. Guè & Salmo)  </li>
+                <li>Noia (feat. Marracash) </li>
+                <li>Nessuno </li>
+                <li>Liberi (feat. Francesca Michielin) </li>
+                <li>Outro  </li>
+            </ul>
+        </div>
+        <!-- Altri album possono seguire lo stesso schema -->
+    </main>
+    <footer>
+        <p>&copy; 2024 Fibroga, Sito Non Ufficiale</p>
+        <p>
+            <a href="termini-servizi.html">Termini e Servizi</a> | 
+            <a href="privacy-policy.html">Privacy Policy</a>
+        </p>
+    </footer>
+</body>
+</html>
